@@ -4,7 +4,7 @@
 
 Ex1: This exercise includes 2 parts.
 
-you can download this source code, run and visit at localhost:3333/ to test this exercise. (To run: go to the folder including this code, on terminal, run 'node /Ex1/app.js)
+you can download this source code, run and visit at localhost:3333/ to test this exercise. (To run: go to the folder including this code, on terminal, run 'node Ex1/app.js)
 
 Part 1: You can get address from the existing latitude and longitude by requesting a GET request at /latlng2Place/$latitude&$longitude.
 
