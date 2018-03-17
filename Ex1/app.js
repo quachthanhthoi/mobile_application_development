@@ -11,4 +11,4 @@ app.route('/latlng2Place/:lat&:lng')
 app.route('/getDistance/:lat1&:lng1&:lat2&:lng2')
   .get(controllers.getDistance);
 
-app.listen(3333)
+app.listen(process.env.PORT || 3333)

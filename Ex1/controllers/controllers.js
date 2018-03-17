@@ -19,11 +19,18 @@ var APIs = {
     var lat = req.params.lat;
     var lng = req.params.lng;
     request({
-      url: 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+lat+','+lng+'&radius=50&key=AIzaSyD_jfH2rEUekKwSG1Lgs6VMP9Q1uJAV6Gw',
+      //url: 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+lat+','+lng+'&radius=50&key=AIzaSyD_jfH2rEUekKwSG1Lgs6VMP9Q1uJAV6Gw',
+      url: 'https://maps.googleapis.com/maps/api/geocode/json?latlng='+lat+','+lng+'&key=AIzaSyCnbtMF-9wn55s1cXNJcYQjhenDRDK7o9Y',
       json: true
     }, (error, response, body) =>{
-      console.log(`A: ${body}`);
-      res.json(body.results[0].name +','+ body.results[0].vicinity)
+      console.log(`A: ${body.results}`);
+      // re = "";
+      // for (i in body.results){
+      //   re += body.results[i].name;
+      //   re += body.results[i].vicinity;
+      // }
+      // res.json(body.results[5])
+      res.json(body.results[0].formatted_address)
     })
   },
 
