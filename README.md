@@ -1,6 +1,7 @@
 # mobile_application_development
 
 #Exercise 1
+
 Ex1: This exercise includes 2 parts.
 You can visit https://lab1-mobile1028.herokuapp.com/ to test this exercise online.
 Or you can download this source code and run at localhost:3333/
