@@ -6,7 +6,7 @@ Ex1: This exercise includes 2 parts.
 
 You can visit https://lab1-mobile1028.herokuapp.com/ to test this exercise online.
 
-Or you can download this source code and run at localhost:3333/
+Or you can download this source code and visit at localhost:3333/ to test this exercise. (go to the folder including this code, on terminal, run 'node /Ex1/app.js)
 
 Part 1: You can get address from the existing latitude and longitude by requesting a GET request at /latlng2Place/$latitude&$longitude.
 
