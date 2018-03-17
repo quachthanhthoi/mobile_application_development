@@ -3,9 +3,13 @@
 #Exercise 1
 
 Ex1: This exercise includes 2 parts.
+
 You can visit https://lab1-mobile1028.herokuapp.com/ to test this exercise online.
+
 Or you can download this source code and run at localhost:3333/
+
 Part 1: You can get address from the existing latitude and longitude by requesting a GET request at /latlng2Place/$latitude&$longitude.
+
 Part 2: You can calculate the distance between 2 points in the Earth supposed (latitude1, longitude1) and (latitude2, longitude2) by requesting a GET request at /getDistance/$latitude1&$longitude1$&latitude2&$longitude2.
 
 For example:
