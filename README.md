@@ -19,7 +19,15 @@ You can calculate the distance between 2 points in the Earth supposed (latitude1
 
 ## Exercise 2
 Ứng dụng chuyển đổi tiền tệ Currency Converter.
-Người dùng có thể nhập số tiền cần chuyển đổi, sau đó click chọn vào 2 ô spinner tương ứng với đơn vị tiền tệ muốn chuyển đổi, và nhấn vào nút "Convert it!" để chuyển đổi tiền tệ.
+- Người dùng có thể nhập số tiền cần chuyển đổi, sau đó click chọn vào 2 ô spinner tương ứng với đơn vị tiền tệ muốn chuyển đổi, và nhấn vào nút "Convert it!" để chuyển đổi tiền tệ.
 
 ![Screenshot](image/img1.png)
 ![Screenshot](image/img2.png)
+
+- Ứng dụng tham khảo tỉ giá tiền tệ từ api của http://apilayer.net/.
+- Một ví dụ để lấy tỉ giá USD và VND:
+```
+http://apilayer.net/api/live?access_key=9ffb64d184d4ccbc8bbb4879f68bafdb&currencies=VND&source=USD&format=1
+```
+- Khi ứng dụng không thể gửi request được thì tỉ giá tiền tệ được dùng là tỉ giá hardcode được lưu sẵn, đồng thời ứng dụng sẽ thông báo cho người dùng biết như hình bên dưới.
+![Screenshot](image/img3.png)
