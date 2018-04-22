@@ -13,6 +13,13 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -212,6 +219,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final RequestQueue queue = Volley.newRequestQueue(this);
 
         final_money = (TextView)findViewById(R.id.txt_final);
 
@@ -222,7 +230,44 @@ public class MainActivity extends AppCompatActivity {
         convert_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+
+
                 money_from = Double.valueOf(money_input.getText().toString());
+                String query_from = "http://apilayer.net/api/live?access_key=9ffb64d184d4ccbc8bbb4879f68bafdb&currencies="+currency_from+"&source=USD&format=1";
+                String query_to = "http://apilayer.net/api/live?access_key=9ffb64d184d4ccbc8bbb4879f68bafdb&currencies="+currency_to+"&source=USD&format=1";
+
+
+
+                StringRequest stringRequest = new StringRequest(Request.Method.GET, query_from,
+                        new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+                                // Display the first 500 characters of the response string.
+                                //mTextView.setText("Response is: "+ response.substring(0,500));
+                                Toast.makeText(MainActivity.this,response.substring(0,500),Toast.LENGTH_SHORT).show();
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        //mTextView.setText("That didn't work!");
+                        Toast.makeText(MainActivity.this,"Cannot send the request to get online currency rate. We're using the offline hardcode saved in our database for the conversion.",Toast.LENGTH_SHORT).show();
+                    }
+                });
+                queue.add(stringRequest);
+
+
+
+
+
+
+
+
+
+
+
+
                 int index1 = 0;
                 int index2 = 0;
 
