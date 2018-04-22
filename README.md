@@ -19,5 +19,5 @@ For example:
 Ứng dụng chuyển đổi tiền tệ Currency Converter.
 Người dùng có thể nhập số tiền cần chuyển đổi, sau đó click chọn vào 2 ô spinner tương ứng với đơn vị tiền tệ muốn chuyển đổi, và nhấn vào nút "Convert it!" để chuyển đổi tiền tệ.
 
-![Screenshot](image/img1.png =250x)
-![Screenshot](./image/img2.png =250x)
+![Screenshot](image/img1.png)
+![Screenshot](image/img2.png)
